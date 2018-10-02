@@ -1,26 +1,23 @@
-# th-web-frontend
+# Tomorrow Headline
 
-## Project setup
-```
-npm install
-```
+## Info
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Tomorrow Headline is a news push project.
 
-### Compiles and minifies for production
-```
-npm run build
-```
+This repo is Tomorrow Headline's web service.
 
-### Run your tests
-```
-npm run test
-```
+Anyone is welcome to contribute to this project.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Technical Details
+
+- Frontend backend separation
+- Frontend
+  - Using `Bootstrap` (latest version: 4.1.3)
+  - Main frame is `Vue.js` (latest version: v2.5.17)
+  - Add support for `Element UI`
+
+## Contract
+
+Name | E-mail
+---- | ------
+newcoderlife | newcoderlife@outlook.com
