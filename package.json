@@ -16,6 +16,8 @@
     "@vue/cli-plugin-babel": "^3.0.4",
     "@vue/cli-plugin-eslint": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
+    "axios": "^0.18.0",
+    "vue-cli-plugin-axios": "0.0.4",
     "vue-cli-plugin-bootstrap": "^1.0.0-alpha.0",
     "vue-cli-plugin-element": "^1.0.0",
     "vue-template-compiler": "^2.5.17"

@@ -23,30 +23,35 @@
 
     <div class="nav-scroller py-1 mb-2">
       <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" href="#">World</a>
-        <a class="p-2 text-muted" href="#">U.S.</a>
-        <a class="p-2 text-muted" href="#">Technology</a>
-        <a class="p-2 text-muted" href="#">Design</a>
-        <a class="p-2 text-muted" href="#">Culture</a>
-        <a class="p-2 text-muted" href="#">Business</a>
-        <a class="p-2 text-muted" href="#">Politics</a>
-        <a class="p-2 text-muted" href="#">Opinion</a>
-        <a class="p-2 text-muted" href="#">Science</a>
-        <a class="p-2 text-muted" href="#">Health</a>
-        <a class="p-2 text-muted" href="#">Style</a>
-        <a class="p-2 text-muted" href="#">Travel</a>
+        <a v-for="tag in tags" :key="tag.slug" class="p-2 text-muted" :href="tag.slug">{{tag.name}}</a>
       </nav>
     </div>
   </div>
 </template>
 
 <script>
+  import '../plugins/axios'
+
   export default {
     name: "THWebHeader",
     data() {
       return {
-        input: ""
+        input: "",
+        tags: {}
+      };
+    },
+    methods: {
+      getTags() {
+        this.axios.get("api/news/tags/").then(
+          response => this.tags = response.data
+        ).catch(
+          // eslint-disable-next-line
+          error => console.error(error)
+        )
       }
+    },
+    mounted() {
+      this.getTags();
     }
   };
 </script>
@@ -107,9 +112,9 @@
   }
 
   .nav-scroller .nav-link {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-    font-size: .875rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 0.875rem;
   }
 
   .card-img-right {
@@ -169,7 +174,7 @@
   }
 
   .blog-post-title {
-    margin-bottom: .25rem;
+    margin-bottom: 0.25rem;
     font-size: 2.5rem;
   }
 
@@ -186,7 +191,7 @@
     color: #999;
     text-align: center;
     background-color: #f9f9f9;
-    border-top: .05rem solid #e5e5e5;
+    border-top: 0.05rem solid #e5e5e5;
   }
 
   .blog-footer p:last-child {
