@@ -1,23 +1,21 @@
-# Tomorrow Headline
+# th-web-frontend
 
-## Info
+> A Vue.js project
 
-Tomorrow Headline is a news push project.
+## Build Setup
 
-This repo is Tomorrow Headline's web service.
+``` bash
+# install dependencies
+npm install
 
-Anyone is welcome to contribute to this project.
+# serve with hot reload at localhost:8080
+npm run dev
 
-## Technical Details
+# build for production with minification
+npm run build
 
-- Frontend backend separation
-- Frontend
-  - Using `Bootstrap` (latest version: 4.1.3)
-  - Main frame is `Vue.js` (latest version: v2.5.17)
-  - Add support for `Element UI`
+# build for production and view the bundle analyzer report
+npm run build --report
+```
 
-## Contract
-
-Name | E-mail
----- | ------
-newcoderlife | newcoderlife@outlook.com
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
