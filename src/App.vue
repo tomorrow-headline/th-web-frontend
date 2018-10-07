@@ -1,28 +1,22 @@
 <template>
   <div id="app">
-    <THWebHeader></THWebHeader>
+    <Header></Header>
+    <ArticleList></ArticleList>
   </div>
 </template>
 
 <script>
-import THWebHeader from './components/Header.vue'
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
+import Header from './components/Header'
+import ArticleList from './components/ArticleList'
 
 export default {
   name: 'app',
   components: {
-    THWebHeader
+    Header,
+    ArticleList
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 </style>

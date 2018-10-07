@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="header">
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
@@ -9,13 +9,9 @@
           <a class="blog-header-logo text-dark" href="#">Tomorrow Headline</a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
-          <a class="text-muted" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3">
-              <circle cx="10.5" cy="10.5" r="7.5"></circle>
-              <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
-            </svg>
-          </a>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          </form>
           <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
         </div>
       </div>
@@ -30,13 +26,13 @@
 </template>
 
 <script>
-import '../plugins/axios'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 export default {
-  name: 'THWebHeader',
-  data () {
+  name: 'header',
+  data: function () {
     return {
-      input: '',
       tags: {}
     }
   },
@@ -56,11 +52,11 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
+  position: relative;
 }
 
 .blog-header-logo {
